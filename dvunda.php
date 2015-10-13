@@ -19,7 +19,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
  
 You should have received a copy of the GNU General Public License
-along with {Plugin Name}. If not, see {License URI}.
+along with UNDA. If not, see UNDA.
 */
 
 //Exit if accessed directly
