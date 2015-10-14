@@ -25,5 +25,22 @@ add_action( 'add_meta_boxes', 'dvunda_add_custom_metabox');
 			</div>
 	</div>
 		
-		<?php
+		 <?php
+		
+		$content = get_post_meta( $post->ID, 'editing_textarea', true );
+		$editor   = 'editing_textarea';
+		$settings = array(
+					'textarea_rows' => 5,
+					'media_buttons' => true,
+					);
+					
+					wp_editor( $content, $editor, $settings);
+		?>
+        </div>
+        
+        <?php
+		
+	}
+	
+	
 		
