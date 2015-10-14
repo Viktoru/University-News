@@ -11,8 +11,19 @@ function dvunda_add_metabox() {
 		);
 }
 	
-	add_action( 'dvunda_meta_box', 'dvunda_add_metabox'); 
+add_action( 'add_meta_boxes', 'dvunda_add_custom_metabox'); 
 	
 	function dvunda_callback() {
+	?>
+	<div class="inside">
+			<div>
+				<label for="u_news">University News</label>
+			</div>
 		
-	}
+			<div>
+			<input type="text" name="u_news" id="u_news" value="">
+			</div>
+	</div>
+		
+		<?php
+		
