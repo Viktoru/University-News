@@ -37,8 +37,8 @@ add_action( 'add_meta_boxes', 'dvunda_add_custom_metabox');
 		$content = get_post_meta( $post->ID, 'editing_textarea', true );
 		$editor   = 'editing_textarea';
 		$settings = array(
-					'textarea_rows' => 5,
-					'media_buttons' => true,
+					'textarea_rows' => 4,
+					'media_buttons' => false,
 					);
 					
 					wp_editor( $content, $editor, $settings);
