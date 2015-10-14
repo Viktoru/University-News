@@ -24,8 +24,15 @@ add_action( 'add_meta_boxes', 'dvunda_add_custom_metabox');
 			<input type="text" name="u_news" id="u_news" value="">
 			</div>
 	</div>
-		
-		 <?php
+		<div>
+        	<div>
+            	<label for="u_news_rss">RSS Website</label>
+            </div>
+        </div>
+         
+         <div class="meta-editor"></div>       
+        
+        <?php
 		
 		$content = get_post_meta( $post->ID, 'editing_textarea', true );
 		$editor   = 'editing_textarea';
@@ -43,4 +50,3 @@ add_action( 'add_meta_boxes', 'dvunda_add_custom_metabox');
 	}
 	
 	
-		
