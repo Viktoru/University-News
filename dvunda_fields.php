@@ -52,6 +52,9 @@ function dvunda_meta_save( $post_id ) {
 	if ( isset( $_POST[ 'u_news' ] ) ) {
 			update_post_meta( $post_id, 'u_news', sanitize_text_field( $_POST[ 'u_news' ] ) );
 		}
+		if ( isset( $_POST[ 'u_news_rss' ] ) ) {
+				update_post_meta( $post_id, 'u_news_rss', sanitize_text_field( $_POST[ 'u_news_rss' ] ) );
+			}
 
 }
 
