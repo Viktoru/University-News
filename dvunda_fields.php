@@ -6,8 +6,8 @@ function dvunda_add_metabox() {
 			'dvunda_id', 
 			'University List', 
 			'dvunda_callback',
-			'u-news',
-			'side'
+			'u_news'
+			
 		);
 }
 	
