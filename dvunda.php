@@ -40,7 +40,9 @@ function dvunda_admin_enqueue_scripts() {
 			wp_enqueue_style( 'dvunda-admin-css', plugins_url('css/vu_admin-unews.css', __FILE__ ) );
 			wp_enqueue_style( 'dvunda-admin-normalize-css', plugins_url('css/vu_admin-normalize.css', __FILE__ ) );
 			wp_enqueue_style( 'dvunda-unews-js', plugins_url('js/vu_admin-unews.js', __FILE__ ), array( 'jquery' ), true );
-			
+		// I added normalize.css website https://modernizr.com/ - Modernizr tells you what HTML,
+		// CSS and JavaScript features the user’s browser has to offer.
+		// AND I added Foundation is a responsive front-end framework made by ZURB. - http://foundation.zurb.com/develop/getting-started.html
 			
 			}
 	
