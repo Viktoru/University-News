@@ -19,7 +19,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
  
 You should have received a copy of the GNU General Public License
-along with UNDA. If not, see UNDA.
+along with {Plugin Name}. If not, see {License URI}.
 */
 
 //Exit if accessed directly
@@ -33,3 +33,16 @@ if ( !defined( 'ABSPATH' ) ) {
 require_once ( plugin_dir_path( __FILE__ ) . 'dvunda_unews.php' );
 require_once ( plugin_dir_path( __FILE__ ) . 'dvunda_fields.php' );
 
+function dvunda_admin_enqueue_scripts() {
+		global $pagenow, $typenow;
+		
+		if ( ($pagenow == 'post.php' || $pagenow == 'post-new.php') && $typenow == 'u_news' ) {
+			wp_enqueue_style( 'dvunda-admin-css', plugins_url('css/vu_admin-unews.css', __FILE__ ) );
+			wp_enqueue_style( 'dvunda-admin-normalize-css', plugins_url('css/vu_admin-normalize.css', __FILE__ ) );
+			wp_enqueue_style( 'dvunda-unews-js', plugins_url('js/vu_admin-unews.js', __FILE__ ), array( 'jquery' ), true );
+			
+			
+			}
+	
+	}
+	add_action( 'admin_enqueue_scripts', 'dvunda_admin_enqueue_scripts' );
